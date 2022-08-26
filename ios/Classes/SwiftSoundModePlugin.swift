@@ -23,10 +23,10 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
 
             result(self.str);
         case "setVibrateMode":
-            AudioServicesPlaySystemSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), {});
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate));
             result(nil);
         case "setNormalMode":
-            AudioServicesPlaySystemSoundWithCompletion(none, {});
+            AudioServicesPlaySystemSound(none);
             result(nil);
         default:
           break;
