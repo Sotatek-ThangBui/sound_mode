@@ -25,7 +25,7 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
                [weak self] m in
                self?.str = m ? "vibrate" : "normal"
             }
-            result(self.str);
+            result("hihi");
             break;
         case "setVibrateMode":
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate));
