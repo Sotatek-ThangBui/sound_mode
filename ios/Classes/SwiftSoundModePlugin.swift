@@ -15,15 +15,14 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
       switch call.method {
         case "getRingerMode":
-
             Mute.shared.notify = {
                [weak self] m in
                self?.str = m ? "vibrate" : "normal"
             }
-
             result(self.str);
             break;
         case "setVibrateMode":
+            print("setVibrateMode");
 //             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate));
             result("haiz");
             break;
