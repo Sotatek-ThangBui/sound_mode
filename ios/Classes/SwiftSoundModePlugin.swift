@@ -23,8 +23,8 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
 
             result(self.str);
         case "setVibrateMode":
-            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate));
-            result(nil);
+//             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate));
+            result("haiz");
         case "setNormalMode":
             AudioServicesPlaySystemSound(none);
             result(nil);
