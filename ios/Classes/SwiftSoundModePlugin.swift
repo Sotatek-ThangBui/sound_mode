@@ -22,12 +22,15 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
             }
 
             result(self.str);
+            break;
         case "setVibrateMode":
 //             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate));
             result("haiz");
+            break;
         case "setNormalMode":
             AudioServicesPlaySystemSound(none);
             result(nil);
+            break;
         default:
           break;
       }
