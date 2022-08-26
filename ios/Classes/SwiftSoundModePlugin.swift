@@ -13,7 +13,6 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-      print("==========, \(call.method)");
       switch call.method {
         case "getRingerMode":
             Mute.shared.notify = {
@@ -23,9 +22,8 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
             result(self.str);
             break;
         case "setVibrateMode":
-            print("setVibrateMode");
-//             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate));
-            result("haiz");
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate));
+            result(nil);
             break;
         case "setNormalMode":
             AudioServicesPlaySystemSound(none);

@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A plugin to manage device sound mode
                        DESC
-  s.homepage         = 'https://github.com/TryingOutSomething/sound_mode'
+  s.homepage         = 'https://github.com/Sotatek-ThangBui/sound_mode.git'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
