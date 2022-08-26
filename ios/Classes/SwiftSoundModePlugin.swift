@@ -13,6 +13,7 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+      print("==========, \(call.method)");
       switch call.method {
         case "getRingerMode":
             Mute.shared.notify = {
