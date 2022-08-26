@@ -1,6 +1,7 @@
 import Flutter
 import UIKit
 import Mute
+import AudioToolbox.AudioServices
 
 public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
   var str: String = "unknown" 
@@ -21,6 +22,8 @@ public class SwiftSoundModePlugin: NSObject, FlutterPlugin {
               }
 
           result(self.str);
+        case "setVibrateMode":
+            AudioServicesPlaySystemSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate), {});
         default:
           break;
       }
